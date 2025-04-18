@@ -80,6 +80,10 @@ integration-test:
 test-example:
 	curl -H 'Cache-Control: no-cache, no-store' -sSL "$(REMOTE_SCRIPT)/test-example.sh" | bash
 
+.PHONY: test-non-destructive
+test-example:
+	curl -H 'Cache-Control: no-cache, no-store' -sSL "$(REMOTE_SCRIPT)/test-non-destructive.sh" | bash
+
 .PHONY: e2e-test
 e2e-test:
 	curl -H 'Cache-Control: no-cache, no-store' -sSL "$(REMOTE_SCRIPT)/run-e2e-test.sh" | bash
