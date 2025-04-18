@@ -82,7 +82,7 @@ test-example:
 
 .PHONY: test-non-destructive
 test-non-destructive:
-	curl -H 'Cache-Control: no-cache, no-store' -sSL "$(REMOTE_SCRIPT)/test-non-destructive.sh" | bash
+	curl -H 'Cache-Control: no-cache, no-store' -sSL "https://raw.githubusercontent.com/kewalaka/tfmod-scaffold/refs/heads/feat/test-non-destructive/avm_scripts/test-non-destructive.sh" | bash
 
 .PHONY: e2e-test
 e2e-test:
